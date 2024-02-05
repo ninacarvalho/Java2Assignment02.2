@@ -1,5 +1,5 @@
 @FunctionalInterface
 public interface ArrayProcessor {
-    double apply( double[] array );
+    double apply(double[] array);
 }
 

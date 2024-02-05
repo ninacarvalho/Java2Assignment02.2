@@ -10,7 +10,7 @@ public class Task02 {
         int listIndex = 0;
 
         while (listIndex < numberList.length) {
-            System.out.printf("Input #%d number for list", listIndex + 1);
+            System.out.printf("Input #%d number for list\n", listIndex + 1);
             try {
                 numberList[listIndex] = scan.nextDouble();
                 listIndex++;
@@ -20,13 +20,20 @@ public class Task02 {
             }
         }
 
+        System.out.println("Which value do you want to check for occurrences?");
+        double value = scan.nextDouble();
+
         double max = GET_MAX.apply(numberList);
         double min = GET_MIN.apply(numberList);
         double sum = GET_SUM.apply(numberList);
         double avg = GET_AVG.apply(numberList);
-        int count = (int) counter(3).apply(numberList);
+        int count = (int) counter(value).apply(numberList);
 
-        System.out.printf("max: %.2f;\n" + "min: %.2f;\n" + "sum: %.2f;\n" + "avg: %.2f;\n" + "count: %d;\n", max, min, sum, avg, count);
+        System.out.printf("Maixmum value: %.2f;\n" +
+                "Minimum value: %.2f;\n" +
+                "Sum of all values: %.2f;\n" +
+                "Average of values: %.2f;\n" +
+                "Number of occurrences of %.2f: %d;\n", max, min, sum, avg, value, count);
     }
 
     public static final ArrayProcessor GET_MAX = a -> Arrays.stream(a).max().orElse(Double.NaN);

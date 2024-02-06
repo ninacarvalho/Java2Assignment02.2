@@ -1,6 +1,7 @@
 package GAss;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -14,6 +15,8 @@ public class RankSys extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         primaryStage.setTitle("Search Name Ranking Application");
+       
+        
 
         // CREATING BUTTONS
         Button btn1 = new Button("Submit Query");
@@ -23,6 +26,7 @@ public class RankSys extends Application {
         Text txt1 = new Text("Enter the year:");
         Text txt2 = new Text("Enter the Gender:");
         Text txt3 = new Text("Enter the name:");
+        
 
         // CREATING TEXT FIELD
         TextField textField1 = new TextField();
@@ -38,6 +42,8 @@ public class RankSys extends Application {
         gridPane.setHgap(5);
 
         // ALIGNMENT
+        gridPane.setAlignment(Pos.CENTER);
+        
         gridPane.add(txt1, 0, 0);
         gridPane.add(textField1, 1, 0);
 
@@ -53,9 +59,15 @@ public class RankSys extends Application {
         //EXIT ON CLICK
         btn2.setOnAction(e -> primaryStage.close());
         
+        //DESIGN ELEMENTS
+        gridPane.setStyle("-fx-background-color: linear-gradient(to bottom, #0000FF, #FFFF00);");
+
 
         // CREATING A SCENE
         Scene scene = new Scene(gridPane);
+        //ADDING BACKGROUND COLOR
+        
+        
         primaryStage.setScene(scene);
         primaryStage.show();
     }

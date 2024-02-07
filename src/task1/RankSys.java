@@ -61,7 +61,6 @@ public class RankSys extends Application {
         gridPane.add(exitButton, 1, 3);
         
         //ADDING BACKGROUND COLOR
-//      gridPane.setStyle("-fx-background-color: linear-gradient(to bottom, #0000FF, #FFFF00);");
         gridPane.setStyle("-fx-background-color: #e2e8c0;");
 
         // CREATING A SCENE

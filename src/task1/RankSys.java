@@ -100,7 +100,6 @@ public class RankSys extends Application {
      		}
      		catch (NumberFormatException ex) {
      			resultLabel.setText("Invalid Year!");	
-     			resultStage.setTitle("Message");
      			resultStage.show();
      		}
      	});
